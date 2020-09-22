@@ -1,6 +1,10 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome"/>
+  <p>{{message}}</p>
+  <button v-on="soldo()">Soldo</button>
+  </div>
 </template>
 
 <script>
@@ -10,7 +14,17 @@ export default {
   name: 'App',
   components: {
     HelloWorld
-  }
+  },
+  data(){
+    return {
+      message: 'Soldo'
+    }
+  },
+  methods: {
+    soldo: ()=>{
+      console.log("Soldo");
+    },
+  },
 }
 </script>
 
